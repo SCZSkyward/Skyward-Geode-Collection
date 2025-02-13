@@ -1,13 +1,13 @@
 # Skyward's Geode Collection
 Welcome to a little database of all of the Geometry Dash mods I made for the mod loader Geode so far.<br/>
 ## Table of Contents
-- Catergories
-  - [Misc](#-misc)
-    - [Rampage!](#-rampage)
-  - [Visual](#-visual)
-    - [No Robtop Logo](#-no-robtop-logo)
+- [Catergories](#catergories)
+  - [Misc](#misc)
+    - [Rampage!](#rampage)
+  - [Visual](#visual)
+    - [No Robtop Logo](#no-robtop-logo)
 
-# Catergories<br/>
+# Catergories
 ## Misc<br/>
 ### Rampage!
 > [!NOTE]
