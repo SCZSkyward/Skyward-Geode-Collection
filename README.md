@@ -1,6 +1,10 @@
 # Skyward's Geode Collection
 Welcome to a little database of all of the Geometry Dash mods I made for the mod loader Geode so far.
 
+## Table of Contents
+- [Misc](#-Misc)
+  - [Rampage!](#-Rampage!)
+
 # Misc
 
 ## Rampage!
@@ -8,3 +12,11 @@ Welcome to a little database of all of the Geometry Dash mods I made for the mod
 This mod will not save the icons that you click with this mod enabled by default. If you would like to turn this off, look at the settings page of the mod.
 
 This mod automatically clicks the icons on the main menu of the game.
+
+# Visual
+
+## No Robtop Logo
+> [!WARNING]
+This mod will not work on versions of the Geode mod loader past 3.0.0-beta.1. If you want a mod like this, you can use [this](https://geode-sdk.org/mods/devcmb.cleanermenu) alternative.
+
+This mod rearranges the social media menu on the title screen to be more akin to seen [here](https://youtu.be/BsfxkpkHs3w?t=145).
