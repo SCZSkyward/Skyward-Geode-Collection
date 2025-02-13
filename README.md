@@ -1,24 +1,20 @@
 # Skyward's Geode Collection
-Welcome to a little database of all of the Geometry Dash mods I made for the mod loader Geode so far.
-
+Welcome to a little database of all of the Geometry Dash mods I made for the mod loader Geode so far.<br/>
 ## Table of Contents
 - [Misc](#-Misc)
   - [Rampage!](#-Rampage!)
 - [Visual](#-Visual)
   - [No Robtop Logo](#-NoRobtopLogo)
 
-# Catergories 
-
+# Catergories<br/>
 ## Misc
 
 ### Rampage!
 > [!NOTE]
 This mod will not save the icons that you click with this mod enabled by default. If you would like to turn this off, look at the settings page of the mod.
 
-This mod automatically clicks the icons on the main menu of the game.
-
-## Visual
-
+This mod automatically clicks the icons on the main menu of the game.<br/>
+## Visual<br/>
 ### No Robtop Logo
 > [!WARNING]
 This mod will not work on versions of the Geode mod loader past 3.0.0-beta.1. If you want a mod like this, you can use [this](https://geode-sdk.org/mods/devcmb.cleanermenu) alternative.
