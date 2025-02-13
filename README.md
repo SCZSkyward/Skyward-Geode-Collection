@@ -1,4 +1,4 @@
-# Skyward-Geode-Collection
+# Skyward's Geode Collection
 Welcome to a little database of all of the Geometry Dash mods I made for the mod loader Geode so far.
 
 # Misc
