@@ -6,7 +6,7 @@ Welcome to a little database of all of the Geometry Dash mods I made for the mod
     - [Rampage!](#rampage)
   - [Visual](#visual)
     - [No Robtop Logo](#no-robtop-logo)<br/>
-## Categories
+## Categories<br/>
 ## Misc<br/>
 ### Rampage!
 > [!NOTE]
