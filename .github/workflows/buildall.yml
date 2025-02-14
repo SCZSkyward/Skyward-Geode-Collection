@@ -112,16 +112,26 @@ jobs:
       with:
         name: Build Output
         path: ./artifacts
+
+    - name: Setup & Get Version
+      id: get_version
+      run: |
+        sudo apt-get install jq
+        VERSION=$(jq -r '.version' Misc/Rampage/mod.json)
+        if [ -z "$VERSION" ]; then
+          VERSION="1.0.0"
+        fi 
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
     
     - name: Create Release
       env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
+          tag: "${{ env.VERSION }}"
       run: |
             sudo chown $USER:$USER ./artifacts/skyward.rampage.geode
             gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
-              --title="Rampage [${tag#v}]" \
+              --title="Rampage [${tag}]" \
               --generate-notes
               ./artifacts/*
       
