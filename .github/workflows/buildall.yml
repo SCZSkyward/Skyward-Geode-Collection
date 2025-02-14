@@ -15,16 +15,6 @@ on:
     branches:
       - "**"
 jobs:
-  checkmodname:
-    runs-on: windows-latest
-    steps:
-    - name: Check for No Robtop Logo
-      if: ${{ github.event.inputs.modname == 'No Robtop Logo' }}
-      working-directory: ./Visual/No Robtop Logo
-
-    - name: Check for Rampage
-      if: ${{ github.event.inputs.modname == 'Rampage' }}
-      working-directory: ./Misc/Rampage
   build:
     strategy:
       fail-fast: false
@@ -50,14 +40,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build the mod
+      - if: github.event.inputs.modname == 'Rampage'
+      - name: Build the mod (Rampage)
         uses: geode-sdk/build-geode-mod@main
         with:
+          working-directory: ./Misc/Rampage
           bindings: geode-sdk/bindings
           bindings-ref: main
           combine: true
           target: ${{ matrix.config.target }}
 
+      - if: github.event.inputs.modname == 'No Robtop Logo'
+      - name: Build the mod (No Robtop Logo)
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          working-directory: ./Visual/No Robtop Logo
+          bindings: geode-sdk/bindings
+          bindings-ref: main
+          combine: true
+          target: ${{ matrix.config.target }}
+          
   package:
     name: Package builds
     runs-on: ubuntu-latest
