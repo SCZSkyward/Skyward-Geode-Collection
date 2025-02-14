@@ -6,7 +6,7 @@ on:
       modname: 
         required: true
         default: 'Rampage'
-        description: Please select the mod you would like to build
+        description: Mod Name
         type: choice
         options:
         - Rampage
@@ -39,9 +39,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
-      - if: github.event.inputs.modname == 'Rampage'
       - name: Build the mod (Rampage)
+        if: github.event.inputs.modname == 'Rampage'
         uses: geode-sdk/build-geode-mod@main
         with:
           working-directory: ./Misc/Rampage
@@ -49,9 +48,9 @@ jobs:
           bindings-ref: main
           combine: true
           target: ${{ matrix.config.target }}
-
-      - if: github.event.inputs.modname == 'No Robtop Logo'
+          
       - name: Build the mod (No Robtop Logo)
+        if: github.event.inputs.modname == 'No Robtop Logo'
         uses: geode-sdk/build-geode-mod@main
         with:
           working-directory: ./Visual/No Robtop Logo
