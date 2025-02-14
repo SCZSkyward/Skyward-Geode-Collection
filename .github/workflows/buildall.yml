@@ -94,6 +94,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref_name }}
       run: |
+            sudo chown $USER:$USER ./artifacts/skyward.rampage.geode
             gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
               --title="No Robtop Logo [${tag#v}]" \
@@ -117,6 +118,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref_name }}
       run: |
+            sudo chown $USER:$USER ./artifacts/skyward.rampage.geode
             gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
               --title="Rampage [${tag#v}]" \
