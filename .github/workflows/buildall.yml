@@ -76,7 +76,7 @@ jobs:
         with:
           name: Build Output
           path: ${{ steps.build.outputs.build-output }}
-  release:
+  release-no-robtop-logo:
     name: Release No Robtop Logo
     if: github.event.inputs.modname == 'No Robtop Logo'
     runs-on: ubuntu-22.04
@@ -90,3 +90,19 @@ jobs:
               --repo="$GITHUB_REPOSITORY" \
               --title="No Robtop Logo [${tag#v}]" \
               --generate-notes
+  release-rampage:
+    name: Release Rampage
+    if: github.event.inputs.modname == 'Rampage'
+    runs-on: ubuntu-22.04
+    steps: 
+      - name: Create Release
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+        run: |
+            gh release create "$tag" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="Rampage [${tag#v}]" \
+              --generate-notes
+
+      
