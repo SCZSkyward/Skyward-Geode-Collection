@@ -91,6 +91,7 @@ jobs:
               --repo="$GITHUB_REPOSITORY" \
               --title="No Robtop Logo [${tag#v}]" \
               --generate-notes
+              ${{ steps.build.outputs.build-output }}
   release-rampage:
     name: Release Rampage
     if: github.event.inputs.modname == 'Rampage'
@@ -106,5 +107,5 @@ jobs:
               --repo="$GITHUB_REPOSITORY" \
               --title="Rampage [${tag#v}]" \
               --generate-notes
-
+              ${{ steps.build.outputs.build-output }}
       
