@@ -131,6 +131,6 @@ jobs:
             gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
               --title="Rampage [${tag}]" \
-              --generate-notes
+              --generate-notes \
               ./artifacts/*
       
