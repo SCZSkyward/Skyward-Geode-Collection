@@ -80,6 +80,7 @@ jobs:
     name: Release No Robtop Logo
     if: github.event.inputs.modname == 'No Robtop Logo'
     runs-on: ubuntu-22.04
+    needs: ['package']
     steps: 
       - name: Create Release
         env: 
@@ -94,6 +95,7 @@ jobs:
     name: Release Rampage
     if: github.event.inputs.modname == 'Rampage'
     runs-on: ubuntu-22.04
+    needs: ['package']
     steps: 
       - name: Create Release
         env: 
