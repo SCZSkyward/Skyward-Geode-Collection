@@ -82,30 +82,44 @@ jobs:
     runs-on: ubuntu-22.04
     needs: ['package']
     steps: 
-      - name: Create Release
-        env: 
+
+    - name: Download Build Artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: Build Output
+        path: ./artifacts
+    
+    - name: Create Release
+      env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref_name }}
-        run: |
+      run: |
             gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
               --title="No Robtop Logo [${tag#v}]" \
               --generate-notes
-              ${{ steps.build.outputs.build-output }}
+              ./artifacts/*
   release-rampage:
     name: Release Rampage
     if: github.event.inputs.modname == 'Rampage'
     runs-on: ubuntu-22.04
     needs: ['package']
     steps: 
-      - name: Create Release
-        env: 
+
+    - name: Download Build Artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: Build Output
+        path: ./artifacts
+    
+    - name: Create Release
+      env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref_name }}
-        run: |
+      run: |
             gh release create "$tag" \
               --repo="$GITHUB_REPOSITORY" \
               --title="Rampage [${tag#v}]" \
               --generate-notes
-              ${{ steps.build.outputs.build-output }}
+              ./artifacts/*
       
