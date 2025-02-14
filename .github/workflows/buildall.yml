@@ -43,7 +43,7 @@ jobs:
         if: github.event.inputs.modname == 'Rampage'
         uses: geode-sdk/build-geode-mod@main
         with:
-          working-directory: ./Misc/Rampage
+          path: ./Misc/Rampage
           bindings: geode-sdk/bindings
           bindings-ref: main
           combine: true
@@ -53,7 +53,7 @@ jobs:
         if: github.event.inputs.modname == 'No Robtop Logo'
         uses: geode-sdk/build-geode-mod@main
         with:
-          working-directory: ./Visual/No Robtop Logo
+          path: ./Visual/No Robtop Logo
           bindings: geode-sdk/bindings
           bindings-ref: main
           combine: true
