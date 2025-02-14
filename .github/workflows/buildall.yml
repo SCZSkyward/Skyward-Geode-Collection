@@ -114,6 +114,7 @@ jobs:
 
     - name: Setup & Get Version
       id: get_version
+      working-directory: ./Misc/Rampage
       run: |
         VERSION=$(jq -r '.version' mod.json)
         if [ -z "$VERSION" ]; then
