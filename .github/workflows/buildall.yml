@@ -14,6 +14,10 @@ on:
   push:
     branches:
       - "**"
+      
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
@@ -72,3 +76,17 @@ jobs:
         with:
           name: Build Output
           path: ${{ steps.build.outputs.build-output }}
+  release:
+    name: Release No Robtop Logo
+    if: github.event.inputs.modname == 'No Robtop Logo'
+    runs-on: ubuntu-22.04
+    steps: 
+      - name: Create Release
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+        run: |
+            gh release create "$tag" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="No Robtop Logo [${tag#v}]" \
+              --generate-notes
