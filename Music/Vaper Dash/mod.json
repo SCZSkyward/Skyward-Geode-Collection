@@ -1,0 +1,24 @@
+{
+	"geode": "4.2.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "skyward.vaperdash",
+	"name": "Vaper Dash",
+	"version": "1.0.0",
+	"developers": ["Skyward","SDG"],
+	"description": "Adds the unused vaperwave mode into GD",
+	"repository": "https://github.com/SCZSkyward/Skyward-Geode-Collection",
+	"tags": ["music", "gameplay"]
+	,"settings": {
+		"enabled": {
+			"type": "bool",
+			"name": "Enabled?",
+			"description": "Decides if the mod is enabled or not",
+			"default": true
+		}
+	}
+}
