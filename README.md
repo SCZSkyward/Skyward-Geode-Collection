@@ -5,7 +5,6 @@ Welcome to a little database of all of the Geometry Dash mods I made for the mod
   - [Vaper Dash](#vaper-dash)
 - [Visual](#visual)
   - [No Robtop Logo](#no-robtop-logo)<br/>
-<<<<<<< Updated upstream
 ## Misc
 ### Rampage!
 This mod automatically clicks the icons on the main menu of the game.<br/>
@@ -15,7 +14,6 @@ This mod automatically clicks the icons on the main menu of the game.<br/>
 > [!NOTE]
 Because of the mod slowing down the player and the music to 0.75 to *try* to make it sync, it will make any completions with the enabled setting on **invalid**
 This mod recreates the unused vaperwave mode from Sonic Mania.<br/>
->>>>>>> Stashed changes
 ## Visual<br/>
 ### No Robtop Logo
 > [!WARNING]
