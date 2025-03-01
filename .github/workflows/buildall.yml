@@ -44,10 +44,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build the mod (Rampage)
-        if: github.event.inputs.modname == 'Rampage'
+        if: github.event.inputs.modname == 'Vaper Dash'
         uses: geode-sdk/build-geode-mod@main
         with:
-          path: ./Misc/Rampage
+          path: ./Music/Vaper Dash
           bindings: geode-sdk/bindings
           bindings-ref: main
           combine: true
