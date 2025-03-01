@@ -44,10 +44,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build the mod (Rampage)
-        if: github.event.inputs.modname == 'Rampage'
+        if: github.event.inputs.modname == 'Vaper Dash'
         uses: geode-sdk/build-geode-mod@main
         with:
-          path: ./Misc/Rampage
+          path: './Music/Vaper Dash'
           bindings: geode-sdk/bindings
           bindings-ref: main
           combine: true
@@ -116,7 +116,7 @@ jobs:
     - name: Setup & Get Version
       id: get_version
       run: |
-       VERSION=$(jq -r '.version' Music/Vaper Dash/mod.json)
+       VERSION=$(jq -r '.version' 'Music/Vaper Dash/mod.json')
         if [ -z "$VERSION" ]; then
           VERSION="1.0.0"
         fi 
