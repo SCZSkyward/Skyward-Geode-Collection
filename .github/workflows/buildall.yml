@@ -52,6 +52,7 @@ jobs:
           bindings-ref: main
           combine: true
           target: ${{ matrix.config.target }}
+          sdk: nightly
           
       - name: Build the mod (No Robtop Logo)
         if: github.event.inputs.modname == 'No Robtop Logo'
@@ -62,6 +63,7 @@ jobs:
           bindings-ref: main
           combine: true
           target: ${{ matrix.config.target }}
+          sdk: nightly
           
   package:
     name: Package builds
