@@ -1,5 +1,5 @@
 {
-	"geode": "4.2.0",
+	"geode": "4.4.0",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
@@ -8,11 +8,11 @@
 	},
 	"id": "skyward.vaperdash",
 	"name": "Vaper Dash",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"developers": ["Skyward","SDG"],
 	"description": "Adds the unused vaperwave mode into GD",
 	"repository": "https://github.com/SCZSkyward/Skyward-Geode-Collection",
-	"tags": ["music", "gameplay"]
+	"tags": ["music", "gameplay", "cheat"]
 	,"settings": {
 		"enabled": {
 			"type": "bool",
