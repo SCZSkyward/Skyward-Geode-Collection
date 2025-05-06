@@ -17,7 +17,7 @@
 		"enabled": {
 			"type": "bool",
 			"name": "Enabled?",
-			"description": "Decides if the mod is enabled or not",
+			"description": "Decides if the mod is enabled or not.\n(Reload any scene for it to take affect)",
 			"default": true
 		}
 	}
