@@ -2,7 +2,6 @@
 #include <Geode/binding/FMODAudioEngine.hpp>
 #include <Geode/modify/FMODAudioEngine.hpp>
 #include <Geode/modify/PlayLayer.hpp>
-#include <Geode/modify/GJGameLevel.hpp>
 
 using namespace geode::prelude;
 
