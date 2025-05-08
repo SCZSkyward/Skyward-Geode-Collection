@@ -8,7 +8,7 @@
 	},
 	"id": "skyward.vaperdash",
 	"name": "Vaper Dash",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"developers": ["Skyward","SDG"],
 	"description": "Adds the unused vaperwave mode into GD",
 	"repository": "https://github.com/SCZSkyward/Skyward-Geode-Collection",

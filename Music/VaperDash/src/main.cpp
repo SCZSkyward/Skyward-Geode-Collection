@@ -2,6 +2,7 @@
 #include <Geode/binding/FMODAudioEngine.hpp>
 #include <Geode/modify/FMODAudioEngine.hpp>
 #include <Geode/modify/PlayLayer.hpp>
+#include <Geode/modify/GJGameLevel.hpp>
 
 using namespace geode::prelude;
 
@@ -26,10 +27,11 @@ class $modify(FMODAudioEngine) {
 class $modify(PlayLayer) {
     virtual void postUpdate(float p0) {
         if (enabled) {
-            PlayLayer::applyTimeWarp(0.75);
+            if (m_isPlatformer != true) {
+                PlayLayer::applyTimeWarp(0.75);
+            }
             PlayLayer::postUpdate(p0);
             PlayLayer::m_isTestMode = true;
-            
         } else {
             PlayLayer::postUpdate(p0);
         }
